@@ -1,0 +1,1 @@
+//Aktuell plats: stockholm, nuvarande tid & datum, nuvarande temp. 

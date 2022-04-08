@@ -1,6 +1,6 @@
 const StartService = async () =>
 {
-    let url ="http://api.weatherstack.com/current?access_key=763dec4c2e121bf9b1c0b9f9e300c672&query=Stockholm" 
+    let url ="https://api.openweathermap.org/data/2.5/weather?q=Stockholm&appid=c66e68db6fdcdb430913a6992f4611e3&units=metric" 
 
     return await fetch(url).then(resp => resp.json());
 };

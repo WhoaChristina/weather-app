@@ -5,8 +5,7 @@ const Navigation = () =>
             <nav>
                 <ul>
                     <li><NavLink to="/">Start</NavLink></li>
-                    <input type="text" />
-                    <button><NavLink to="/search">Sök</NavLink></button>
+                    <li><NavLink to="/search">Sök</NavLink></li>
                 </ul>
             </nav>
             </>)

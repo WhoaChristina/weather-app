@@ -1,13 +1,16 @@
 //Aktuell plats: stockholm, nuvarande tid & datum, nuvarande temp. 
 
-const StartComponent =  ({item}) =>
+const StartComponent =  (props) =>
 {
     //temp funkar inte, local time kommer inte funka heller
+    let start = props.Start;
+    let other = props.Start.main
+    console.log(other);
     let localTime = "hej";
     return(<>
-        <h2>{item.name}</h2>
-        <p>{localTime}</p>
-        <p>{item.temp}</p>
+        <h2>{start.name}</h2>
+        <p></p>
+        <p></p>
         </>)
 };
 export default StartComponent;

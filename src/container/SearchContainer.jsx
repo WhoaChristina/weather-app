@@ -1,15 +1,18 @@
 import { useState } from "react";
 import SearchService from '../Service/SearchService'
-import SearchRes from '../components/SearchComponant/Search'
+import Search from '../components/SearchComponant/Search'
+import SearchRes from "../components/SearchComponant/SearchRes"
 const SearchContainer = () =>
 {
     let [cityList, setCityList] = useState([]); 
-    const Search = (searchVal) =>
+    const search = async (searchVal) =>
     {
-        setCityList(SearchService(searchVal))
+        let res = await SearchService();
+        let filteredRes = res.filter(a => a.name.toLowerCase().includes(searchVal.toLowerCase()));
+        setCityList(filteredRes)
     };
     return(<>
-        <Search callback={Search}/>
+        <Search makeSearch={search}/>
         <SearchRes list = {cityList} />
         </>);
 };

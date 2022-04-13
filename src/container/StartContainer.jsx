@@ -7,7 +7,7 @@ const WeatherContainer = () =>
     const[startList, setStartlist] = useState([])
     useEffect( () => {
 
-        const getStart = async () => {
+        const getStart = async() => {
 
             let start = await StartService();
             setStartlist(start);
@@ -17,7 +17,7 @@ const WeatherContainer = () =>
 
     }, [])
     return(<>
-            <Start item = {startList} />
+            <Start Start = {startList} />
             </>)
 }
 export default WeatherContainer;

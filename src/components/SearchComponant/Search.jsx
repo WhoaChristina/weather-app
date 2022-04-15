@@ -1,10 +1,10 @@
 import { useRef } from "react";
-const Search = ({Search}) =>
+const Search = ({makeSearch}) =>
 {
     const searchVal = useRef(); 
     return (<>
             <input type="text" ref={searchVal}/>
-            <button onClick={() => Search(searchVal.current.value)}>Sök</button>
+            <button onClick={() => makeSearch(searchVal.current.value)}>Sök</button>
             </>);
 };
 export default Search;

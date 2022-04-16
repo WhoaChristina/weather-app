@@ -5,7 +5,7 @@ const SearchList = ({list}) =>
         {
             return (<>
                     <li>{city.name}</li>
-                    <NavLink to="/details" City={city.name}><button>Detaljer</button></NavLink>
+                    <NavLink to="/details" state={{city}}><button>Detaljer</button></NavLink>
                     </>)
         });
     return(<ul>{cityList}</ul>)

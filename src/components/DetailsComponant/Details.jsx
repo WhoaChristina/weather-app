@@ -1,12 +1,10 @@
 import dayjs from "dayjs";
-
-//näst kommande 5 dagar, min/max temp per dag, datum och ikon
+import "./Details.css";
 const Details = (props) =>
 {
     var utc = require('dayjs/plugin/utc')
     dayjs.extend(utc)
     let city = props.City;
-    console.log(props.Icons);
     let icon = props.Icons;
     if(city)
     {
@@ -20,17 +18,29 @@ const Details = (props) =>
             <li>{Math.round(info.temp.max)} ºC</li>
         );
         const iconList = icon.slice(0,5).map((icons) =>
-        <li><img src={icons} alt="icons" /> </li>
+        <li><img src={icons} alt="icons" className="image" /> </li>
         );
 
         return (<>
-            <h3>Datum:</h3>
-            <ul>{dates}</ul>
-            <h3>Max temp:</h3>
-            <ul>{maxTemp}</ul>
-            <h3>Min temp:</h3>
-            <ul>{minTemp}</ul>
-            <ul>{iconList}</ul>
+            <div className="center"><h2>{props.Name}</h2></div>
+            <div className="grid">
+                <div>
+                    <h3>Datum:</h3>
+                    <ul>{dates}</ul>
+                </div>
+                <div>
+                    <h3>Max temp:</h3>
+                    <ul>{maxTemp}</ul>
+                </div>
+                <div>
+                    <h3>Min temp:</h3>
+                    <ul>{minTemp}</ul>
+                </div>
+                <div>
+                    <h3>Väder:</h3>
+                    <ul>{iconList}</ul>
+                </div>
+            </div>
         </>)
 
     }

@@ -6,7 +6,7 @@ const SearchContainer = () =>
 {
     let [cityList, setCityList] = useState([]); 
     const city = City.getAllCities();
-    console.log(city)
+
     const search = async (searchVal) => 
     { 
         let res = city.filter(chosenCity => (chosenCity.name.toLowerCase()).includes(searchVal.toLowerCase()));

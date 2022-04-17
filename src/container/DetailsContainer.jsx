@@ -7,7 +7,6 @@ const DetailsContainer = (props) =>
 {
     const location = useLocation();
     const {city} = location.state;
-
     const [chosenCity, setChosenCity] = useState();
     const [icons, setIcons] = useState([]);
 

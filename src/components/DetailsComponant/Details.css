@@ -1,0 +1,21 @@
+.grid
+{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    text-align: center;
+    margin-left: 3%;
+}
+h3
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+li
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 3rem;
+}
+.image
+{
+    width: 2rem;
+    height: 1.8rem;
+}

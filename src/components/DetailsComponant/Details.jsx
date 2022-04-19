@@ -42,8 +42,6 @@ const Details = (props) =>
                 </div>
             </div>
         </>)
-
     }
-
 }
 export default Details;

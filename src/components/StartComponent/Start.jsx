@@ -10,7 +10,6 @@ const StartComponent =  (props) =>
     {
         other = Math.round(start.main.temp);
     }
-    console.log(img);
     return(<>
         <div className="center">
         <h2>{start.name}</h2>

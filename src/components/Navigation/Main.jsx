@@ -12,3 +12,4 @@ const Main = () =>
             </Routes>)
 };
 export default Main;
+//Folder is in wrong place, should not be under components
